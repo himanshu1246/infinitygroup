@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Infinity Developers - Luxurious Living &amp; Boutique Workspaces</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#735c00",
+                    "border-muted": "#E5E5E1",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#eae1d4",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#fff8f0",
+                    "on-surface": "#1f1b13",
+                    "on-tertiary-fixed": "#00174b",
+                    "inverse-surface": "#343027",
+                    "tertiary-fixed": "#dbe1ff",
+                    "primary-fixed": "#ffe088",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#4d4635",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#e1d9cc",
+                    "surface-variant": "#eae1d4",
+                    "inverse-primary": "#e9c349",
+                    "tertiary": "#415ba4",
+                    "outline-variant": "#d0c5af",
+                    "on-secondary": "#ffffff",
+                    "surface-ivory": "#F9F9F7",
+                    "bronze-deep": "#8C6A1C",
+                    "primary": "#735c00",
+                    "surface-container-high": "#efe7da",
+                    "surface-container": "#f5eddf",
+                    "surface": "#fff8f0",
+                    "inverse-on-surface": "#f8f0e2",
+                    "on-primary-fixed-variant": "#574500",
+                    "primary-container": "#d4af37",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fff8f0",
+                    "on-secondary-container": "#636262",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#fbf3e5",
+                    "on-primary-fixed": "#241a00",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#7f7663",
+                    "secondary": "#5f5e5e",
+                    "tertiary-container": "#97b0ff",
+                    "secondary-container": "#e2dfde",
+                    "on-background": "#1f1b13",
+                    "secondary-fixed": "#e5e2e1",
+                    "charcoal-black": "#0D0D0D",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#254188",
+                    "primary-fixed-dim": "#e9c349"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "label-caps": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface-ivory');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .btn-primary {
+            background-color: theme('colors.primary-container');
+            color: theme('colors.on-primary');
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: theme('colors.bronze-deep');
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .card-hover {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid theme('colors.border-muted');
+            background: transparent;
+            border-radius: 0;
+            padding-left: 0;
+        }
+        .input-underline:focus {
+            box-shadow: none;
+            border-bottom-color: theme('colors.primary-container');
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">INFINITY</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps tracking-widest uppercase" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps tracking-widest uppercase" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps tracking-widest uppercase" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps tracking-widest uppercase" href="#">Contact</a>
+</div>
+<button class="hidden md:block btn-primary px-6 py-3 font-label-caps text-label-caps tracking-widest uppercase rounded">
+            Book Visit
+        </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-charcoal-black">
+<div class="absolute inset-0 w-full h-full">
+<div class="bg-cover bg-center w-full h-full opacity-70" data-alt="A sweeping, high-end architectural visualization of a luxury skyscraper (Infinity Icon) at twilight. The building features a striking modern glass facade reflecting the warm, golden hues of the setting sun. The surrounding landscape is manicured and upscale. The lighting is dramatic, emphasizing the scale and premium quality of the structure against a deep blue sky. Corporate modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAh__Rz3O_ugaE14D9Qg34c1JS2Cl3n2fDGP2dYp_e9AiFUCzaYV6-rDr62lfkuGva4A617NTZ1BgF8jIC4O_xIvkhOyKqXg1ebL-xLmyiUNvP4FwVq4hUuKqzieCv2pxeQPZGWppJBpT3TwGWGDPDTrWiVn-ZfvkT3tDZjqo70_vxzko5s3X0HhWhrnGG-qAJXuZc9nnBR5We_X8qQVy6leO417x0PYrK2zNGWAPxyK18Gujz8wOqcmHodnpOF_Feq_1xq4zjs8liM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+<span class="inline-block px-4 py-1 mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Your Aspiration, Your World</span>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight">Luxurious Living &amp; Boutique Workspaces</h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-10">Experience the pinnacle of architectural excellence and institutional reliability with Infinity Group.</p>
+<button class="btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">
+                    View Projects
+                </button>
+</div>
+</section>
+<!-- Company Introduction -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-6">About Infinity Group</h2>
+<div class="w-16 h-1 bg-primary-container mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        We are committed to delivering spaces that inspire and elevate your lifestyle. With a focus on quality, transparency, and timely delivery, Infinity Group has established itself as a beacon of reliability in the real estate sector.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Our legacy is built on the trust of our customers and our unwavering dedication to architectural brilliance.
+                    </p>
+<div class="flex items-center gap-8">
+<div>
+<div class="font-display-lg text-display-lg text-primary-container mb-1">2000+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Happy Customers</div>
+</div>
+<div class="w-px h-16 bg-border-muted"></div>
+<div>
+<div class="font-display-lg text-display-lg text-primary-container mb-1">15+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Years of Trust</div>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
+<div class="bg-cover bg-center w-full h-full" data-alt="A refined, professional interior shot of a high-end corporate lobby or boutique workspace developed by Infinity Group. The space features minimalist design, premium materials like marble and polished wood, and subtle gold accents. Soft, natural light streams in through large floor-to-ceiling windows, creating a serene, established, and expensive atmosphere. The aesthetic is clean, modern, and corporate." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDArBhXs6MLi7K59qKpiCvm3bwc2dNImEvMctjgn7SI0vL8yQo2AQWXv6lI2OqLcZMQoAfWKgMzPQiz_Kthdhc4qb4ZwgXudJpwNUIXnHQaOwMqwexfssbamN6SeBjFFIlH64wNU8o750MiCcjrL_QY6Ez_DqlpFJeHL5UkJvdKjHny0OlJ3POnftLz7aGcjPqWKrGP-bgH8N2Uy3s94zCrTdbJJYb_xRB9MDcQMaVAIVQKcUkUBGU9elpJglj5z-6Ky0wqvjHHrkWh')"></div>
+</div>
+</div>
+</section>
+<!-- Featured Projects (Bento Grid Style) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4">Featured Projects</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Discover our portfolio of meticulously crafted residential and commercial landmarks.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Feature Project -->
+<div class="md:col-span-8 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col h-[600px]">
+<div class="relative flex-grow overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide, majestic shot of the Infinity Icon commercial building. The architecture is bold and contemporary, featuring a sleek glass facade and strong geometric lines. The image is bright and crisp, taken during daytime with clear skies. The framing emphasizes the building's scale and its status as a premium boutique workspace destination in a bustling urban environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFXpXGHVQD3V6m8ubiQ39k48WaLf9Jj5QJbgpM0HtHlW88ow8iXJwMS4Fa2h6-yf5Xc0lb2YAXK40cEj0xwi5BFyerNTPh2lQBxGfFdp4PKWFn6UoM_NhQiSL2cPoTG09Lt4mqTvCIH1r7m9c1vAu5ww-wlZ3jdm796-LMg24BKJGwAJpkeQKrHHE6Cx2kFNbHeHcd3AbLzhRE8_UrECJ21mwBKN2YG3OQH4fW-dynEQhXeMoa5rr6JUrhDosni8OM_5vFnzXQJCcd')"></div>
+<div class="absolute top-6 left-6 bg-charcoal-black text-on-primary px-3 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded">On-Going</div>
+</div>
+<div class="p-8 bg-surface-container-lowest relative z-10 flex flex-col justify-end h-1/3">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">Infinity Icon</h3>
+<div class="flex items-center text-on-surface-variant mb-4 font-body-md text-body-md">
+<span class="material-symbols-outlined text-[18px] mr-2" style="font-variation-settings: 'FILL' 0;">location_on</span>
+                                Prime Location
+                            </div>
+<div class="flex justify-between items-end mt-auto">
+<div>
+<div class="font-label-caps text-label-caps text-outline mb-1 uppercase tracking-widest">RERA No</div>
+<div class="font-body-md text-body-md text-charcoal-black">PR/GJ/AHMEDABAD/...</div>
+</div>
+<button class="text-primary-container hover:text-bronze-deep transition-colors flex items-center font-label-caps text-label-caps tracking-widest uppercase">
+                                    Explore <span class="material-symbols-outlined ml-1" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Projects Stack -->
+<div class="md:col-span-4 flex flex-col gap-8 h-[600px]">
+<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col">
+<div class="relative flex-grow overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A detailed view of the Emperia Icon residential project, showcasing luxury balconies and modern exterior styling. The lighting is warm and inviting, hinting at a comfortable, upscale lifestyle. The architectural details are crisp, emphasizing the high-quality construction and refined aesthetic that appeals to aspirational homebuyers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBL_bJpM3E7pF3WIGM9EfTedx5vg-6uIKZK1UfJ9ppkxrRYwVw9mL5db7r_8zyAVH1vB997R2eJtMRokVZ4ZdJqrPj2VoJf4PIJXUbWErnt1o9fRSG0EmnODVX-osCRGijmBsekLX6apt4SSVyl0WgJ_tyCVe_9oUGcxnaaI-jUnFgWdAeeEh8zHvy7qmJ0XHxuAe-CDokVrD8f35Ot1Tmam6Mjm3KuCWjI1TdNDoz3Pz5IWCfb7pmWTgN4ofqzDor7Z6TH2t1xtinZ')"></div>
+</div>
+<div class="p-6 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-1 text-[20px]">Emperia Icon</h3>
+<div class="flex justify-between items-center mt-4">
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Residential</div>
+<button class="text-primary-container flex items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col">
+<div class="relative flex-grow overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="An exterior shot of the Viviana project, an established and elegant residential complex. The scene captures the well-maintained landscaping and the sophisticated, somewhat minimalist design of the buildings. The image conveys a sense of quiet luxury and institutional reliability, typical of Infinity Group's completed projects." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3Xg8Jgi1JOXKARv1n45W1x9MwOHhHqVc0Gve3ihonJPf5Gm-RvVpYgJJBI1YSueAjfsDaIY5g1Y4FHsGcTIxVXdsoPlRYhEDHAok_iZ1xOtqvm77pg_K95KDnKugUNYTA95gEqTXZrYurv_DLDJWWS6TR3ZbjC4HhcR-uL2XF2oQY9ybDcAYALAStGtAOgB9gv1HgduXg-B0mI2ku3aqD4_w0ojfjXcTjS2bLvSDPaYacRyMbiIZI8bfUsDGs2rZItP9EX1x1gYVo')"></div>
+<div class="absolute top-4 left-4 bg-charcoal-black text-on-primary px-2 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded text-[10px]">Ready to Move</div>
+</div>
+<div class="p-6 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-1 text-[20px]">Viviana</h3>
+<div class="flex justify-between items-center mt-4">
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Residential</div>
+<button class="text-primary-container flex items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enquiry Section (Glassmorphism) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-surface-dim">
+<div class="max-w-4xl mx-auto relative z-10 glass-panel rounded-xl p-10 md:p-16 ambient-shadow border border-white/40">
+<div class="text-center mb-10">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4">Enquire Now</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Connect with our experts to find your perfect space.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase mb-2">Full Name</label>
+<input class="w-full input-underline focus:ring-0 text-charcoal-black font-body-md text-body-md" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase mb-2">Phone Number</label>
+<input class="w-full input-underline focus:ring-0 text-charcoal-black font-body-md text-body-md" placeholder="+91" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase mb-2">Email Address</label>
+<input class="w-full input-underline focus:ring-0 text-charcoal-black font-body-md text-body-md" placeholder="Enter your email" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase mb-2">Project of Interest</label>
+<select class="w-full input-underline focus:ring-0 text-charcoal-black font-body-md text-body-md appearance-none bg-transparent">
+<option>Select a project</option>
+<option>Infinity Icon</option>
+<option>Emperia Icon</option>
+<option>Viviana</option>
+</select>
+</div>
+<div class="pt-4 text-center">
+<button class="btn-primary w-full md:w-auto px-12 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded" type="submit">
+                            Submit Enquiry
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto bg-inverse-surface dark:bg-charcoal-black pt-section-gap pb-8 text-primary-fixed dark:text-primary-fixed-dim font-body-md text-body-md">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-primary-fixed mb-4">INFINITY</div>
+<p class="text-surface-variant dark:text-outline-variant max-w-xs text-sm">Luxurious Living &amp; Boutique Workspaces.</p>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-16">
+<div class="flex flex-col space-y-4">
+<a class="text-surface-variant dark:text-outline-variant hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed underline-offset-4 font-label-caps text-label-caps tracking-widest uppercase" href="#">About</a>
+<a class="text-surface-variant dark:text-outline-variant hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed underline-offset-4 font-label-caps text-label-caps tracking-widest uppercase" href="#">Projects</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="text-surface-variant dark:text-outline-variant hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed underline-offset-4 font-label-caps text-label-caps tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-surface-variant dark:text-outline-variant hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed underline-offset-4 font-label-caps text-label-caps tracking-widest uppercase" href="#">Terms</a>
+</div>
+</div>
+<div class="w-full mt-12 pt-8 border-t border-outline/30 text-center text-sm text-surface-variant/70 md:col-span-full flex flex-col md:flex-row justify-between items-center">
+<span>© 2024 Infinity Developers. All Rights Reserved.</span>
+</div>
+</footer>
+<!-- WhatsApp Floating Action Button -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</body></html>
