@@ -385,12 +385,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = btn ? btn.textContent : 'Send Message';
             if (btn) btn.textContent = "Sending...";
             
-            const inputs = contactForm.querySelectorAll('input, textarea');
+            const inputs = contactForm.querySelectorAll('input, textarea, select');
+            const projectName = inputs[3] && inputs[3].value ? inputs[3].value : '';
+            const msg = inputs[4] ? inputs[4].value : (inputs[3] && inputs[3].tagName === 'TEXTAREA' ? inputs[3].value : 'N/A');
+            
+            const messageStr = projectName ? `Interested in: ${projectName}\nMessage: ${msg}` : msg;
+            
             const data = {
                 name: inputs[0] ? inputs[0].value : 'N/A',
                 phone: inputs[1] ? inputs[1].value : 'N/A',
                 email: inputs[2] ? inputs[2].value : 'N/A',
-                message: inputs[3] ? inputs[3].value : 'N/A',
+                message: messageStr,
                 source: "Contact Page Form"
             };
             
