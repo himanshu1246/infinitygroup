@@ -211,10 +211,23 @@
             box-shadow: none;
             border-bottom-color: theme('colors.primary-container');
         }
+    
+        /* 3D Button Enhancements */
+        .btn-primary {
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 0 theme('colors.bronze-deep'), 0 8px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease !important;
+        }
+        .btn-primary:active {
+            transform: translateY(4px) scale(0.98) !important;
+            box-shadow: 0 0 0 theme('colors.bronze-deep'), 0 2px 5px rgba(0,0,0,0.1) !important;
+        }
+    
     </style>
 
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="/main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="min-h-screen flex flex-col font-body-md text-body-md">
@@ -237,12 +250,12 @@
 <!-- Contact Section -->
 <section id="contact" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-charcoal-black relative text-center">
     <div class="max-w-4xl mx-auto relative z-10 pb-32">
-        <h2 class="font-display-lg text-display-lg text-primary-fixed mb-4">Contact Us</h2>
+        <h2 class="font-display-lg text-display-lg text-primary-fixed mb-4" data-aos="flip-down">Contact Us</h2>
         <p class="font-body-lg text-body-lg text-secondary-fixed">Get in touch with us to explore luxury living possibilities.</p>
     </div>
 </section>
 
-<section class="px-margin-mobile md:px-margin-desktop bg-surface-container-lowest -mt-32 relative z-20 pb-section-gap">
+<section class="px-margin-mobile md:px-margin-desktop bg-surface-container-lowest -mt-32 relative z-20 pb-section-gap" data-aos="fade-up">
     <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Reach Out -->
         <div class="bg-surface-ivory p-8 md:p-12 border border-border-muted/50 rounded">
@@ -296,10 +309,10 @@
                           <option disabled selected value="">Select a project</option>
                           <option value="Infinity Icon">Infinity Icon</option>
                           <option value="Suncity">Suncity</option>
-                          <option value="Emperia Icon">Emperia Icon</option>
+                          <option value="Infinity Ikon">Infinity Ikon</option>
                           <option value="Emperia C2">Emperia C2</option>
-                          <option value="Emperia Township">Emperia Township</option>
-                          <option value="Emperia Vandhan Heights">Emperia Vandhan Heights</option>
+                          <option value="Infinity Heights">Infinity Heights</option>
+                          <option value="Infinity">Infinity</option>
                           <option value="Infinity Highway City">Infinity Highway City</option>
                           <option value="Viviana">Viviana</option>
                       </select>
@@ -317,11 +330,11 @@
 </section>
 
 <!-- Map Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory">
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory" data-aos="fade-up">
     <div class="max-w-container-max mx-auto text-center mb-12">
-        <h2 class="font-headline-lg text-headline-lg text-charcoal-black">Find Us on Map</h2>
+        <h2 class="font-headline-lg text-headline-lg text-charcoal-black" data-aos="flip-down">Find Us on Map</h2>
     </div>
-    <div class="max-w-container-max mx-auto h-[400px] bg-surface-container-low border border-border-muted/50 overflow-hidden ambient-shadow">
+    <div class="max-w-container-max mx-auto h-[400px] bg-surface-container-low border border-border-muted/50 overflow-hidden ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
         <iframe src="https://maps.google.com/maps?q=SHREE+CHAMUNDA+HARMONY,+Office+No-23+%26+24,+Plot+No-68,+69,+Sector+19,+Kamothe,+Navi+Mumbai,+Maharashtra+410209&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
@@ -427,4 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>AOS.init({duration: 800, once: true});</script>
 </body>

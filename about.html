@@ -211,10 +211,23 @@
             box-shadow: none;
             border-bottom-color: theme('colors.primary-container');
         }
+    
+        /* 3D Button Enhancements */
+        .btn-primary {
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 0 theme('colors.bronze-deep'), 0 8px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease !important;
+        }
+        .btn-primary:active {
+            transform: translateY(4px) scale(0.98) !important;
+            box-shadow: 0 0 0 theme('colors.bronze-deep'), 0 2px 5px rgba(0,0,0,0.1) !important;
+        }
+    
     </style>
 
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="/main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="min-h-screen flex flex-col font-body-md text-body-md">
@@ -236,20 +249,20 @@
 
 <main class="flex-grow">
     <!-- Hero Section -->
-    <section class="relative h-[80vh] md:h-[600px] flex items-center justify-center overflow-hidden bg-charcoal-black">
+    <section class="relative h-[80vh] md:h-[600px] flex items-center justify-center overflow-hidden bg-charcoal-black" data-aos="fade-up">
         <div class="absolute inset-0 w-full h-full">
             <div class="bg-cover bg-center w-full h-full opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAh__Rz3O_ugaE14D9Qg34c1JS2Cl3n2fDGP2dYp_e9AiFUCzaYV6-rDr62lfkuGva4A617NTZ1BgF8jIC4O_xIvkhOyKqXg1ebL-xLmyiUNvP4FwVq4hUuKqzieCv2pxeQPZGWppJBpT3TwGWGDPDTrWiVn-ZfvkT3tDZjqo70_vxzko5s3X0HhWhrnGG-qAJXuZc9nnBR5We_X8qQVy6leO417x0PYrK2zNGWAPxyK18Gujz8wOqcmHodnpOF_Feq_1xq4zjs8liM')"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-16">
             <div class="font-label-caps text-label-caps text-primary-fixed mb-4 uppercase tracking-widest">Our Creations Define Ethnic Luxury</div>
-            <h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight">Our Legacy of Excellence</h1>
+            <h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Our Legacy of Excellence</h1>
             <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto">Merging high-end architectural aesthetics with institutional reliability to build more than just structures—we build legacies.</p>
         </div>
     </section>
 
     <!-- Statistics Section -->
-    <section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface-ivory">
+    <section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface-ivory" data-aos="fade-up">
         <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-primary-container/20 border-y border-primary-container/20 py-12">
             <div class="py-6 md:py-0 px-4">
                 <div class="font-display-lg text-display-lg text-primary-container mb-2">1000<span class="text-primary-container">+</span></div>
@@ -267,35 +280,35 @@
     </section>
 
     <!-- Meet Our Team -->
-    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory text-center">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory text-center" data-aos="fade-up">
         <div class="max-w-4xl mx-auto mb-16">
-            <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-6 uppercase tracking-wider">Meet Our Team</h2>
+            <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-6 uppercase tracking-wider" data-aos="flip-down">Meet Our Team</h2>
             <div class="w-16 h-1 bg-primary-container mx-auto mb-8"></div>
             <p class="font-body-lg text-body-lg text-on-surface-variant">
                 With a vision to grow in the fastest way possible without compromising on ethics and quality, our team has simple and grounded individuals who believe in absolute transparency and accountability.
             </p>
         </div>
         <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow">
-                <h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">K. R. Jairam</h3>
-                <div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Partner</div>
-            </div>
-            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow">
+            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
                 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">K. Naushad</h3>
                 <div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Partner</div>
             </div>
-            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow">
+            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
                 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">S. Irshad</h3>
+                <div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Partner</div>
+            </div>
+            <div class="p-8 border border-border-muted/50 rounded bg-surface-container-lowest flex flex-col justify-center items-center h-[200px] hover:border-primary-container transition-colors ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
+                <h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">K. R. Jairam</h3>
                 <div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Partner</div>
             </div>
         </div>
     </section>
 
     <!-- Group Companies & Quote -->
-    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory" data-aos="fade-up">
         <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-8">Infinity Group & Companies</h2>
+                <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-8" data-aos="flip-down">Infinity Group & Companies</h2>
                 <ul class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
                     <li class="flex items-center"><span class="text-primary-container mr-4 text-xl">◆</span> JMJ Projects</li>
                     <li class="flex items-center"><span class="text-primary-container mr-4 text-xl">◆</span> Emperia Infra</li>
@@ -306,7 +319,7 @@
                     <li class="flex items-center"><span class="text-primary-container mr-4 text-xl">◆</span> Lifestyle Builders & Developers</li>
                 </ul>
             </div>
-            <div class="bg-surface-container-lowest p-12 ambient-shadow border border-white/40 flex items-center justify-center text-center">
+            <div class="bg-surface-container-lowest p-12 ambient-shadow border border-white/40 flex items-center justify-center text-center" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
                 <h3 class="font-display-lg text-display-lg text-charcoal-black leading-tight italic">
                     "A Road to Success is Always Under Construction"
                 </h3>
@@ -315,15 +328,15 @@
     </section>
 
     <!-- Mission, Vision & Core Values -->
-    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" data-aos="fade-up">
         <div class="max-w-container-max mx-auto text-center mb-16">
-            <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4 uppercase tracking-wider">Mission, Vision & Core Values</h2>
+            <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4 uppercase tracking-wider" data-aos="flip-down">Mission, Vision & Core Values</h2>
             <div class="w-16 h-1 bg-primary-container mx-auto"></div>
         </div>
         
         <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <!-- Vision -->
-            <div class="bg-surface-container-lowest p-8 md:p-12 border border-border-muted/50 h-full text-left ambient-shadow">
+            <div class="bg-surface-container-lowest p-8 md:p-12 border border-border-muted/50 h-full text-left ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
                 <span class="material-symbols-outlined text-[32px] text-primary-container mb-6" style="font-variation-settings: 'FILL' 1;">visibility</span>
                 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-4">Vision</h3>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -331,7 +344,7 @@
                 </p>
             </div>
             <!-- Mission -->
-            <div class="bg-surface-container-lowest p-8 md:p-12 h-full text-left border border-border-muted/50 ambient-shadow">
+            <div class="bg-surface-container-lowest p-8 md:p-12 h-full text-left border border-border-muted/50 ambient-shadow" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
                 <span class="material-symbols-outlined text-[32px] text-charcoal-black mb-6" style="font-variation-settings: 'FILL' 0;">flag</span>
                 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-4">Mission</h3>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -350,11 +363,11 @@
 
         <!-- Core Value Pillars -->
         <div class="max-w-container-max mx-auto flex flex-wrap justify-center gap-4 md:gap-6">
-            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded">Dependability</div>
-            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded">Transparency</div>
-            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded">Integrity</div>
-            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded">Accountability</div>
-            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded">Simplicity</div>
+            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">Dependability</div>
+            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">Transparency</div>
+            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">Integrity</div>
+            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">Accountability</div>
+            <div class="px-6 py-3 border border-charcoal-black text-charcoal-black bg-surface-container-lowest ambient-shadow font-label-caps text-label-caps tracking-widest uppercase rounded" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">Simplicity</div>
         </div>
     </section>
 </main>
@@ -409,5 +422,8 @@
       <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
     </svg>
 </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>AOS.init({duration: 800, once: true});</script>
 </body>
 </html>

@@ -211,10 +211,23 @@
             box-shadow: none;
             border-bottom-color: theme('colors.primary-container');
         }
+    
+        /* 3D Button Enhancements */
+        .btn-primary {
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 0 theme('colors.bronze-deep'), 0 8px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease !important;
+        }
+        .btn-primary:active {
+            transform: translateY(4px) scale(0.98) !important;
+            box-shadow: 0 0 0 theme('colors.bronze-deep'), 0 2px 5px rgba(0,0,0,0.1) !important;
+        }
+    
     </style>
 
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="/main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="min-h-screen flex flex-col font-body-md text-body-md">
@@ -235,23 +248,120 @@
 </nav>
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden bg-charcoal-black">
-<div class="absolute inset-0 w-full h-full">
-<div class="bg-cover bg-center w-full h-full opacity-70" data-alt="A sweeping, high-end architectural visualization of a luxury skyscraper (Infinity Icon) at twilight. The building features a striking modern glass facade reflecting the warm, golden hues of the setting sun. The surrounding landscape is manicured and upscale. The lighting is dramatic, emphasizing the scale and premium quality of the structure against a deep blue sky. Corporate modern aesthetic." style="background-image: url('/asset/background.png')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
-</div>
-<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
-<span class="inline-block px-4 py-1 mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Your Aspiration, Your World</span>
-<h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight">Luxurious Living &amp; Boutique Workspaces</h1>
-<p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-10">Experience the pinnacle of architectural excellence and institutional reliability with Infinity Group.</p>
-<a href="/projects.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Projects</a>
-</div>
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-charcoal-black" data-aos="fade-up">
+    <div id="hero-carousel" class="absolute inset-0 w-full h-full">
+        <!-- Slide 1: Infinity Icon -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 z-10">
+            <div class="bg-cover bg-center w-full h-full opacity-70" style="background-image: url('/asset/infinity%20icon%20.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+                    <span class="inline-block px-4 py-1 mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
+                    <h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Infinity Icon</h1>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-10">Premium Residential Spaces in Shedung, Panvel.</p>
+                    <a href="/projects/infinity-icon-panvel.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Viviana -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-10">
+            <div class="bg-cover bg-center w-full h-full opacity-70" style="background-image: url('/asset/viviana.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+                    <span class="inline-block px-4 py-1 mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
+                    <h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Viviana</h1>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-10">A tranquil residential haven situated in Neral.</p>
+                    <a href="/projects/viviana-neral.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Infinity Ikon -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-10">
+            <div class="bg-cover bg-center w-full h-full opacity-70" style="background-image: url('/asset/emperia%20icon.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+                    <span class="inline-block px-4 py-1 mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
+                    <h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Infinity Ikon</h1>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-10">A fully commercial hub situated in the prime locale of Nerul, Navi Mumbai.</p>
+                    <a href="/projects/emperia-icon-nerul.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-primary-container transition-colors focus:outline-none">
+        <span class="material-symbols-outlined text-[48px]">chevron_left</span>
+    </button>
+    <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-primary-container transition-colors focus:outline-none">
+        <span class="material-symbols-outlined text-[48px]">chevron_right</span>
+    </button>
+
+    <!-- Carousel Indicators -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        <button onclick="goToSlide(0)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-100 transition-opacity focus:outline-none"></button>
+        <button onclick="goToSlide(1)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
+        <button onclick="goToSlide(2)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
+    </div>
+
+    <!-- Script for Carousel -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        let slideInterval;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100');
+                    indicators[index].classList.remove('opacity-50');
+                    indicators[index].classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                    indicators[index].classList.remove('opacity-100');
+                    indicators[index].classList.add('opacity-50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+            resetInterval();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+            resetInterval();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        slideInterval = setInterval(nextSlide, 5000);
+    </script>
 </section>
 <!-- Company Introduction -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory">
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-ivory" data-aos="fade-up">
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div>
-<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-6">About Infinity Group</h2>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-6" data-aos="flip-down">About Infinity Group</h2>
 <div class="w-16 h-1 bg-primary-container mb-8"></div>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
                         We are committed to delivering spaces that inspire and elevate your lifestyle. With a focus on quality, transparency, and timely delivery, Infinity Group has established itself as a beacon of reliability in the real estate sector.
@@ -277,15 +387,15 @@
 </div>
 </section>
 <!-- Featured Projects (Bento Grid Style) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" data-aos="fade-up">
 <div class="max-w-container-max mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4">Featured Projects</h2>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4" data-aos="flip-down">Featured Projects</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Discover our portfolio of meticulously crafted residential and commercial landmarks.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
 <!-- Main Feature Project -->
-<div class="md:col-span-8 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col h-[600px]">
+<div class="md:col-span-8 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col h-[600px]" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
 <div class="relative flex-grow overflow-hidden">
 <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide, majestic shot of the Infinity Icon commercial building. The architecture is bold and contemporary, featuring a sleek glass facade and strong geometric lines. The image is bright and crisp, taken during daytime with clear skies. The framing emphasizes the building's scale and its status as a premium boutique workspace destination in a bustling urban environment." style="background-image: url('/asset/infinity%20icon%20.png')"></div>
 <div class="absolute top-6 left-6 bg-charcoal-black text-on-primary px-3 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded">On-Going</div>
@@ -307,19 +417,19 @@
 </div>
 <!-- Secondary Projects Stack -->
 <div class="md:col-span-4 flex flex-col gap-8 h-[600px]">
-<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col">
+<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
 <div class="relative flex-grow overflow-hidden">
 <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A detailed view of the Emperia Icon residential project, showcasing luxury balconies and modern exterior styling. The lighting is warm and inviting, hinting at a comfortable, upscale lifestyle. The architectural details are crisp, emphasizing the high-quality construction and refined aesthetic that appeals to aspirational homebuyers." style="background-image: url('/asset/emperia%20icon.png')"></div>
 </div>
 <div class="p-6 bg-surface-container-lowest">
-<h3 class="font-headline-md text-headline-md text-charcoal-black mb-1 text-[20px]">Emperia Icon</h3>
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-1 text-[20px]">Infinity Ikon</h3>
 <div class="flex justify-between items-center mt-4">
 <div class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Residential</div>
 <a href="/projects/emperia-icon-nerul.html" class="text-primary-container flex items-center"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></a>
 </div>
 </div>
 </div>
-<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col">
+<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
 <div class="relative flex-grow overflow-hidden">
 <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="An exterior shot of the Viviana project, an established and elegant residential complex. The scene captures the well-maintained landscaping and the sophisticated, somewhat minimalist design of the buildings. The image conveys a sense of quiet luxury and institutional reliability, typical of Infinity Group's completed projects." style="background-image: url('/asset/viviana.png')"></div>
 <div class="absolute top-4 left-4 bg-charcoal-black text-on-primary px-2 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded text-[10px]">Ready to Move</div>
@@ -337,10 +447,10 @@
 </div>
 </section>
 <!-- Enquiry Section (Glassmorphism) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-surface-dim">
-<div class="max-w-4xl mx-auto relative z-10 glass-panel rounded-xl p-10 md:p-16 ambient-shadow border border-white/40">
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-surface-dim" data-aos="fade-up">
+<div class="max-w-4xl mx-auto relative z-10 glass-panel rounded-xl p-10 md:p-16 ambient-shadow border border-white/40" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
 <div class="text-center mb-10">
-<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4">Enquire Now</h2>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4" data-aos="flip-down">Enquire Now</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">Connect with our experts to find your perfect space.</p>
 </div>
 <form class="space-y-8">
@@ -363,7 +473,7 @@
 <select class="w-full input-underline focus:ring-0 text-charcoal-black font-body-md text-body-md appearance-none bg-transparent">
 <option>Select a project</option>
 <option>Infinity Icon</option>
-<option>Emperia Icon</option>
+<option>Infinity Ikon</option>
 <option>Viviana</option>
 </select>
 </div>
@@ -425,4 +535,7 @@
       <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
     </svg>
 </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>AOS.init({duration: 800, once: true});</script>
 </body>
