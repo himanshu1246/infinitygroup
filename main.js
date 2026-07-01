@@ -99,6 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div>
                             <input type="tel" pattern="[0-9]{10}" title="Please enter exactly 10 digits" placeholder="Phone Number (10 digits)" required class="w-full border-b border-border-muted py-2 bg-transparent focus:outline-none focus:border-primary-fixed font-body-md text-charcoal-black">
                         </div>
+                                                <div class="mb-6 flex items-start text-left">
+                            <div class="flex items-center h-5 mt-0.5">
+                                <input id="consent_modal" name="consent" type="checkbox" required class="w-4 h-4 border-border-muted rounded bg-surface-container-lowest focus:ring-2 focus:ring-primary-container cursor-pointer accent-primary-container">
+                            </div>
+                            <label for="consent_modal" class="ml-3 font-body-sm text-body-sm text-on-surface-variant text-[12px] cursor-pointer leading-tight">
+                                I consent to receive RCS, WhatsApp, E-mail & SMS communications from <span class="font-bold text-charcoal-black">Infinity Group</span>. I also agree to the <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Terms & Conditions</a> and <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Privacy Policy</a>.
+                            </label>
+                        </div>
                         <button type="submit" class="w-full btn-primary py-4 font-label-caps text-label-caps tracking-widest uppercase rounded mt-4">
                             Submit Enquiry
                         </button>
@@ -180,3 +188,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// Add consent checkbox logic
+(function() {
+    function initConsentLogic() {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            const consentCheckbox = form.querySelector('input[name="consent"]');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            if (consentCheckbox && submitBtn) {
+                // Initial state
+                submitBtn.disabled = !consentCheckbox.checked;
+                if (submitBtn.disabled) {
+                    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+                
+                // On change
+                consentCheckbox.addEventListener('change', (e) => {
+                    submitBtn.disabled = !e.target.checked;
+                    if (submitBtn.disabled) {
+                        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    } else {
+                        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    }
+                });
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initConsentLogic);
+    } else {
+        initConsentLogic();
+    }
+})();

@@ -14,9 +14,17 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+  .material-symbols-outlined {
+    font-feature-settings: 'liga' !important;
+    font-variant-ligatures: normal !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
@@ -231,7 +239,7 @@
 </head>
 
 <body class="min-h-screen flex flex-col font-body-md text-body-md">
-<nav class="fixed top-0 left-0 w-full z-50 bg-charcoal-black/95 backdrop-blur-xl border-b border-primary-container/20 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 mx-auto">
+<nav class="sticky top-0 left-0 w-full z-50 bg-charcoal-black/95 backdrop-blur-xl border-b border-primary-container/20 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 mx-auto">
     <a href="/index.html"><img src="/asset/Infinity%20Group%20new%20without%20TM%20logo.png" alt="Infinity Group Logo" class="h-12 md:h-16 w-auto object-contain"></a>
     <div class="hidden md:flex space-x-8 nav-links">
         <a class="text-secondary-fixed font-label-caps text-label-caps tracking-widest uppercase transition-colors hover:text-primary-fixed" href="/index.html">Home</a>
@@ -248,89 +256,57 @@
 </nav>
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="grid grid-cols-1 grid-rows-1 relative w-full overflow-hidden bg-charcoal-black md:h-screen" data-aos="fade-up">
-    <div id="hero-carousel" class="col-start-1 row-start-1 grid grid-cols-1 grid-rows-1 w-full h-full">
+<section class="relative w-full overflow-hidden bg-surface-ivory" data-aos="fade-up">
+    <div id="hero-carousel" class="relative w-full h-auto">
         <!-- Slide 1: Infinity Icon -->
-                <div class="carousel-slide col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 opacity-100 z-10">
-            <div class="flex flex-col md:block w-full h-full">
-                <!-- Mobile Native Image (No Cropping) -->
-                <div class="w-full h-[60vh] relative md:hidden overflow-hidden bg-charcoal-black">
-                    <img src="/asset/infinity%20icon%20.png" class="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110" alt="" />
-                    <img src="/asset/infinity%20icon%20.png" class="absolute inset-0 w-full h-full object-contain block" alt="Infinity Icon" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent"></div>
-                </div>
+        <div class="carousel-slide relative w-full h-auto transition-opacity duration-1000 opacity-100 z-10">
+            <div class="relative w-full h-auto overflow-hidden bg-surface-ivory">
+                <img src="/asset/infinity%20icon%20.png" class="w-full h-auto block md:h-[85vh] md:object-contain md:w-full" alt="Infinity Icon" />
                 
-                <!-- Desktop Background Overlay -->
-                <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-charcoal-black">
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/infinity%20icon%20.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat opacity-70" style="background-image: url('/asset/infinity%20icon%20.png')"></div>
-</div>
-                <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
                 
                 <!-- Text Content -->
-                <div class="w-full flex flex-col justify-center bg-charcoal-black py-8 px-6 md:bg-transparent md:absolute md:inset-0 z-10 text-center">
-                    <div class="max-w-container-max mx-auto md:mt-20">
-                        <span class="inline-block px-4 py-1 mb-4 md:mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
-                        <h1 class="font-display-lg text-display-lg text-on-primary mb-4 md:mb-6 max-w-4xl mx-auto leading-tight">Infinity Icon</h1>
-                        <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-8 md:mb-10">Premium Residential Spaces in Shedung, Panvel.</p>
-                        <a href="/projects/infinity-icon-panvel.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                <div class="absolute inset-0 w-full flex flex-col justify-end pb-8 md:justify-center md:pb-0 z-30 text-center px-6 pointer-events-none">
+                    <div class="max-w-md mx-auto md:mt-20 px-4">
+                        <span class="inline-block px-4 py-1 mb-2 md:mb-6 border border-charcoal-black bg-white/70 text-charcoal-black font-bold font-label-caps text-[10px] md:text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">🟡 ONGOING</span>
+                        <h1 class="font-display-lg text-[2rem] leading-none md:text-display-lg text-charcoal-black mb-2 md:mb-6 max-w-4xl mx-auto leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,1)]">Infinity Icon</h1>
+                        <p class="font-body-lg text-body-lg text-charcoal-black font-semibold max-w-2xl mx-auto mb-8 md:mb-10 hidden md:block drop-shadow-[0_0_8px_rgba(255,255,255,1)]">Premium Residential Spaces in Shedung, Panvel.</p>
+                        <a href="/projects/infinity-icon-panvel.html" class="inline-block btn-primary pointer-events-auto px-6 py-3 md:px-8 md:py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 2: Viviana -->
-                <div class="carousel-slide col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
-            <div class="flex flex-col md:block w-full h-full">
-                <!-- Mobile Native Image (No Cropping) -->
-                <div class="w-full h-[60vh] relative md:hidden overflow-hidden bg-charcoal-black">
-                    <img src="/asset/viviana.png" class="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110" alt="" />
-                    <img src="/asset/viviana.png" class="absolute inset-0 w-full h-full object-contain block" alt="Viviana" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent"></div>
-                </div>
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
+            <div class="relative w-full h-full overflow-hidden bg-surface-ivory">
+                <img src="/asset/viviana.png" class="w-full h-full object-cover block md:h-[85vh] md:object-contain md:w-full" alt="Viviana" />
                 
-                <!-- Desktop Background Overlay -->
-                <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-charcoal-black">
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/viviana.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat opacity-70" style="background-image: url('/asset/viviana.png')"></div>
-</div>
-                <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
                 
                 <!-- Text Content -->
-                <div class="w-full flex flex-col justify-center bg-charcoal-black py-8 px-6 md:bg-transparent md:absolute md:inset-0 z-10 text-center">
-                    <div class="max-w-container-max mx-auto md:mt-20">
-                        <span class="inline-block px-4 py-1 mb-4 md:mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
-                        <h1 class="font-display-lg text-display-lg text-on-primary mb-4 md:mb-6 max-w-4xl mx-auto leading-tight">Viviana</h1>
-                        <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-8 md:mb-10">A tranquil residential haven situated in Neral.</p>
-                        <a href="/projects/viviana-neral.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                <div class="absolute inset-0 w-full flex flex-col justify-end pb-8 md:justify-center md:pb-0 z-30 text-center px-6 pointer-events-none">
+                    <div class="max-w-md mx-auto md:mt-20 px-4">
+                        <span class="inline-block px-4 py-1 mb-2 md:mb-6 border border-charcoal-black bg-white/70 text-charcoal-black font-bold font-label-caps text-[10px] md:text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">✅ COMPLETED</span>
+                        <h1 class="font-display-lg text-[2rem] leading-none md:text-display-lg text-charcoal-black mb-2 md:mb-6 max-w-4xl mx-auto leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,1)]">Viviana</h1>
+                        <p class="font-body-lg text-body-lg text-charcoal-black font-semibold max-w-2xl mx-auto mb-8 md:mb-10 hidden md:block drop-shadow-[0_0_8px_rgba(255,255,255,1)]">A tranquil residential haven situated in Neral.</p>
+                        <a href="/projects/viviana-neral.html" class="inline-block btn-primary pointer-events-auto px-6 py-3 md:px-8 md:py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 3: Infinity Ikon -->
-                <div class="carousel-slide col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
-            <div class="flex flex-col md:block w-full h-full">
-                <div class="w-full h-[60vh] relative md:hidden overflow-hidden bg-charcoal-black">
-                    <img src="/asset/infinity%20icon.png" class="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110" alt="" />
-                    <img src="/asset/infinity%20icon.png" class="absolute inset-0 w-full h-full object-contain block" alt="Infinity Ikon" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent"></div>
-                </div>
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
+            <div class="relative w-full h-full overflow-hidden bg-surface-ivory">
+                <img src="/asset/infinity%20icon.png" class="w-full h-full object-cover block md:h-[85vh] md:object-contain md:w-full" alt="Infinity Ikon" />
                 
-                <!-- Desktop Background Overlay -->
-                <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-charcoal-black">
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/infinity%20icon.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat opacity-70" style="background-image: url('/asset/infinity%20icon.png')"></div>
-</div>
-                <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/50 to-transparent"></div>
                 
                 <!-- Text Content -->
-                <div class="w-full flex flex-col justify-center bg-charcoal-black py-8 px-6 md:bg-transparent md:absolute md:inset-0 z-10 text-center">
-                    <div class="max-w-container-max mx-auto md:mt-20">
-                        <span class="inline-block px-4 py-1 mb-4 md:mb-6 border border-primary-fixed/50 text-primary-fixed font-label-caps text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">Featured Project</span>
-                        <h1 class="font-display-lg text-display-lg text-on-primary mb-4 md:mb-6 max-w-4xl mx-auto leading-tight">Infinity Ikon</h1>
-                        <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-8 md:mb-10">A fully commercial hub situated in the prime locale of Nerul, Navi Mumbai.</p>
-                        <a href="/projects/infinity-icon-nerul.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
+                <div class="absolute inset-0 w-full flex flex-col justify-end pb-8 md:justify-center md:pb-0 z-30 text-center px-6 pointer-events-none">
+                    <div class="max-w-md mx-auto md:mt-20 px-4">
+                        <span class="inline-block px-4 py-1 mb-2 md:mb-6 border border-charcoal-black bg-white/70 text-charcoal-black font-bold font-label-caps text-[10px] md:text-label-caps tracking-widest uppercase rounded-full backdrop-blur-sm">🟡 ONGOING</span>
+                        <h1 class="font-display-lg text-[2rem] leading-none md:text-display-lg text-charcoal-black mb-2 md:mb-6 max-w-4xl mx-auto leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,1)]">Infinity Ikon</h1>
+                        <p class="font-body-lg text-body-lg text-charcoal-black font-semibold max-w-2xl mx-auto mb-8 md:mb-10 hidden md:block drop-shadow-[0_0_8px_rgba(255,255,255,1)]">A fully commercial hub situated in the prime locale of Nerul, Navi Mumbai.</p>
+                        <a href="/projects/infinity-icon-nerul.html" class="inline-block btn-primary pointer-events-auto px-6 py-3 md:px-8 md:py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">View Project</a>
                     </div>
                 </div>
             </div>
@@ -338,18 +314,18 @@
     </div>
 
     <!-- Carousel Controls -->
-    <button onclick="prevSlide()" class="hidden md:block absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-primary-container transition-colors focus:outline-none">
+    <button onclick="prevSlide()" class="hidden md:block absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-charcoal-black hover:text-primary-container transition-colors focus:outline-none">
         <span class="material-symbols-outlined text-[48px]">chevron_left</span>
     </button>
-    <button onclick="nextSlide()" class="hidden md:block absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-primary-container transition-colors focus:outline-none">
+    <button onclick="nextSlide()" class="hidden md:block absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-charcoal-black hover:text-primary-container transition-colors focus:outline-none">
         <span class="material-symbols-outlined text-[48px]">chevron_right</span>
     </button>
 
     <!-- Carousel Indicators -->
     <div class="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-        <button onclick="goToSlide(0)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-100 transition-opacity focus:outline-none"></button>
-        <button onclick="goToSlide(1)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
-        <button onclick="goToSlide(2)" class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
+        <button onclick="goToSlide(0)" class="carousel-indicator w-3 h-3 rounded-full bg-charcoal-black opacity-100 transition-opacity focus:outline-none"></button>
+        <button onclick="goToSlide(1)" class="carousel-indicator w-3 h-3 rounded-full bg-charcoal-black opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
+        <button onclick="goToSlide(2)" class="carousel-indicator w-3 h-3 rounded-full bg-charcoal-black opacity-50 hover:opacity-100 transition-opacity focus:outline-none"></button>
     </div>
 
     <!-- Script for Carousel -->
@@ -362,13 +338,27 @@
         function updateSlide() {
             slides.forEach((slide, index) => {
                 if (index === currentSlide) {
-                    slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
-                    slide.classList.add('opacity-100', 'z-10');
+                    slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0', 'absolute', 'inset-0', 'h-full');
+                    slide.classList.add('opacity-100', 'z-10', 'relative', 'h-auto');
+                    
+                    // Update inner image class for active state
+                    let img = slide.querySelector('img');
+                    if(img) {
+                        img.classList.remove('h-full', 'object-cover');
+                        img.classList.add('h-auto');
+                    }
                     indicators[index].classList.remove('opacity-50');
                     indicators[index].classList.add('opacity-100');
                 } else {
-                    slide.classList.remove('opacity-100', 'z-10');
-                    slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+                    slide.classList.remove('opacity-100', 'z-10', 'relative', 'h-auto');
+                    slide.classList.add('opacity-0', 'pointer-events-none', 'z-0', 'absolute', 'inset-0', 'h-full');
+                    
+                    // Update inner image class for inactive state
+                    let img = slide.querySelector('img');
+                    if(img) {
+                        img.classList.remove('h-auto');
+                        img.classList.add('h-full', 'object-cover');
+                    }
                     indicators[index].classList.remove('opacity-100');
                     indicators[index].classList.add('opacity-50');
                 }
@@ -393,12 +383,37 @@
             resetInterval();
         }
 
-        function resetInterval() {
+        let isCarouselVisible = true;
+
+        function startInterval() {
             clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 5000);
+            if (isCarouselVisible) {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
         }
 
-        slideInterval = setInterval(nextSlide, 5000);
+        function resetInterval() {
+            startInterval();
+        }
+
+        // Intersection Observer to pause carousel when out of view
+        const carouselObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isCarouselVisible = entry.isIntersecting;
+                if (isCarouselVisible) {
+                    startInterval();
+                } else {
+                    clearInterval(slideInterval);
+                }
+            });
+        }, { threshold: 0.05 });
+        
+        const heroCarouselElement = document.getElementById('hero-carousel');
+        if (heroCarouselElement) {
+            carouselObserver.observe(heroCarouselElement);
+        } else {
+            startInterval();
+        }
     </script>
 </section>
 <!-- Company Introduction -->
@@ -425,10 +440,9 @@
 </div>
 </div>
 </div>
-<div class="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
+<div class="relative h-auto rounded-lg overflow-hidden shadow-2xl">
 <div class="relative w-full h-full overflow-hidden bg-charcoal-black" data-alt="A refined, professional interior shot of a high-end corporate lobby or boutique workspace developed by Infinity Group. The space features minimalist design, premium materials like marble and polished wood, and subtle gold accents. Soft, natural light streams in through large floor-to-ceiling windows, creating a serene, established, and expensive atmosphere. The aesthetic is clean, modern, and corporate." >
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDArBhXs6MLi7K59qKpiCvm3bwc2dNImEvMctjgn7SI0vL8yQo2AQWXv6lI2OqLcZMQoAfWKgMzPQiz_Kthdhc4qb4ZwgXudJpwNUIXnHQaOwMqwexfssbamN6SeBjFFIlH64wNU8o750MiCcjrL_QY6Ez_DqlpFJeHL5UkJvdKjHny0OlJ3POnftLz7aGcjPqWKrGP-bgH8N2Uy3s94zCrTdbJJYb_xRB9MDcQMaVAIVQKcUkUBGU9elpJglj5z-6Ky0wqvjHHrkWh')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDArBhXs6MLi7K59qKpiCvm3bwc2dNImEvMctjgn7SI0vL8yQo2AQWXv6lI2OqLcZMQoAfWKgMzPQiz_Kthdhc4qb4ZwgXudJpwNUIXnHQaOwMqwexfssbamN6SeBjFFIlH64wNU8o750MiCcjrL_QY6Ez_DqlpFJeHL5UkJvdKjHny0OlJ3POnftLz7aGcjPqWKrGP-bgH8N2Uy3s94zCrTdbJJYb_xRB9MDcQMaVAIVQKcUkUBGU9elpJglj5z-6Ky0wqvjHHrkWh')"></div>
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDArBhXs6MLi7K59qKpiCvm3bwc2dNImEvMctjgn7SI0vL8yQo2AQWXv6lI2OqLcZMQoAfWKgMzPQiz_Kthdhc4qb4ZwgXudJpwNUIXnHQaOwMqwexfssbamN6SeBjFFIlH64wNU8o750MiCcjrL_QY6Ez_DqlpFJeHL5UkJvdKjHny0OlJ3POnftLz7aGcjPqWKrGP-bgH8N2Uy3s94zCrTdbJJYb_xRB9MDcQMaVAIVQKcUkUBGU9elpJglj5z-6Ky0wqvjHHrkWh" class="w-full h-auto block transform transition-transform duration-700 group-hover:scale-105" alt="Project Image" />
 </div>
 </div>
 </div>
@@ -440,15 +454,14 @@
 <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4" data-aos="flip-down">Featured Projects</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Discover our portfolio of meticulously crafted residential and commercial landmarks.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 <!-- Main Feature Project -->
-<div class="md:col-span-8 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col h-[600px]" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
-<div class="relative flex-grow overflow-hidden">
-<div class="relative w-full h-full overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="A wide, majestic shot of the Infinity Icon commercial building. The architecture is bold and contemporary, featuring a sleek glass facade and strong geometric lines. The image is bright and crisp, taken during daytime with clear skies. The framing emphasizes the building's scale and its status as a premium boutique workspace destination in a bustling urban environment." >
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/infinity%20icon%20.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat" style="background-image: url('/asset/infinity%20icon%20.png')"></div>
+<div class="md:col-span-8 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col h-auto" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
+<div class="relative overflow-hidden">
+<div class="relative w-full h-auto overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="A wide, majestic shot of the Infinity Icon commercial building. The architecture is bold and contemporary, featuring a sleek glass facade and strong geometric lines. The image is bright and crisp, taken during daytime with clear skies. The framing emphasizes the building's scale and its status as a premium boutique workspace destination in a bustling urban environment." >
+    <img src="/asset/infinity%20icon%20.png" class="w-full h-auto block transform transition-transform duration-700 group-hover:scale-105" alt="Project Image" />
 </div>
-<div class="absolute top-6 left-6 bg-charcoal-black text-on-primary px-3 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded">On-Going</div>
+<div class="absolute top-6 left-6 bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps tracking-widest uppercase flex items-center shadow-lg">🟡 ONGOING</div>
 </div>
 <div class="p-8 bg-surface-container-lowest relative z-10 flex flex-col justify-end h-1/3">
 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-2">Infinity Icon</h3>
@@ -461,17 +474,17 @@
 <div class="font-label-caps text-label-caps text-outline mb-1 uppercase tracking-widest">RERA No</div>
 <div class="font-body-md text-body-md text-charcoal-black">P52000050845</div>
 </div>
-<a href="/projects/infinity-icon-panvel.html" class="text-primary-container hover:text-bronze-deep transition-colors flex items-center font-label-caps text-label-caps tracking-widest uppercase">Explore <span class="material-symbols-outlined ml-1" style="font-variation-settings: \'FILL\' 0;">arrow_forward</span></a>
+<a href="/projects/infinity-icon-panvel.html" class="text-primary-container hover:text-bronze-deep transition-colors flex items-center font-label-caps text-label-caps tracking-widest uppercase">Explore <span class="material-symbols-outlined ml-1" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></a>
 </div>
 </div>
 </div>
 <!-- Secondary Projects Stack -->
-<div class="md:col-span-4 flex flex-col gap-8 h-[600px]">
-<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
-<div class="relative flex-grow overflow-hidden">
-<div class="relative w-full h-full overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="A detailed view of the Infinity Icon residential project, showcasing luxury balconies and modern exterior styling. The lighting is warm and inviting, hinting at a comfortable, upscale lifestyle. The architectural details are crisp, emphasizing the high-quality construction and refined aesthetic that appeals to aspirational homebuyers." >
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/infinity%20icon.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat" style="background-image: url('/asset/infinity%20icon.png')"></div>
+<div class="md:col-span-4 flex flex-col gap-8 h-auto">
+<div class="group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
+<div class="relative overflow-hidden">
+<div class="absolute top-4 left-4 z-10 bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps tracking-widest uppercase flex items-center shadow-lg text-[10px]">🟡 ONGOING</div>
+<div class="relative w-full h-auto overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="A detailed view of the Infinity Icon residential project, showcasing luxury balconies and modern exterior styling. The lighting is warm and inviting, hinting at a comfortable, upscale lifestyle. The architectural details are crisp, emphasizing the high-quality construction and refined aesthetic that appeals to aspirational homebuyers." >
+    <img src="/asset/infinity%20icon.png" class="w-full h-auto block transform transition-transform duration-700 group-hover:scale-105" alt="Project Image" />
 </div>
 </div>
 <div class="p-6 bg-surface-container-lowest">
@@ -482,13 +495,12 @@
 </div>
 </div>
 </div>
-<div class="flex-1 group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
-<div class="relative flex-grow overflow-hidden">
-<div class="relative w-full h-full overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="An exterior shot of the Viviana project, an established and elegant residential complex. The scene captures the well-maintained landscaping and the sophisticated, somewhat minimalist design of the buildings. The image conveys a sense of quiet luxury and institutional reliability, typical of Infinity Group's completed projects." >
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/viviana.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat" style="background-image: url('/asset/viviana.png')"></div>
+<div class="group card-hover bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow flex flex-col" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
+<div class="relative overflow-hidden">
+<div class="relative w-full h-auto overflow-hidden bg-charcoal-black group-hover:scale-105 transform transition-transform duration-700" data-alt="An exterior shot of the Viviana project, an established and elegant residential complex. The scene captures the well-maintained landscaping and the sophisticated, somewhat minimalist design of the buildings. The image conveys a sense of quiet luxury and institutional reliability, typical of Infinity Group's completed projects." >
+    <img src="/asset/viviana.png" class="w-full h-auto block transform transition-transform duration-700 group-hover:scale-105" alt="Project Image" />
 </div>
-<div class="absolute top-4 left-4 bg-charcoal-black text-on-primary px-2 py-1 font-label-caps text-label-caps tracking-widest uppercase rounded text-[10px]">Ready to Move</div>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps tracking-widest uppercase flex items-center shadow-lg text-[10px]">✅ COMPLETED</div>
 </div>
 <div class="p-6 bg-surface-container-lowest">
 <h3 class="font-headline-md text-headline-md text-charcoal-black mb-1 text-[20px]">Viviana</h3>
@@ -532,6 +544,15 @@
 <option>Infinity Ikon</option>
 <option>Viviana</option>
 </select>
+</div>
+
+<div class="mb-6 flex items-start text-left">
+    <div class="flex items-center h-5 mt-0.5">
+        <input id="consent" name="consent" type="checkbox" required class="w-4 h-4 border-border-muted rounded bg-surface-container-lowest focus:ring-2 focus:ring-primary-container cursor-pointer accent-primary-container">
+    </div>
+    <label for="consent" class="ml-3 font-body-sm text-body-sm text-on-surface-variant text-[12px] cursor-pointer leading-tight">
+        I consent to receive RCS, WhatsApp, E-mail & SMS communications from <span class="font-bold text-charcoal-black">Infinity Group</span>. I also agree to the <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Terms & Conditions</a> and <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Privacy Policy</a>.
+    </label>
 </div>
 <div class="pt-4 text-center">
 <button class="btn-primary w-full md:w-auto px-12 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded" type="submit">

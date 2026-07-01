@@ -11,8 +11,16 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+  .material-symbols-outlined {
+    font-feature-settings: 'liga' !important;
+    font-variant-ligatures: normal !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
       tailwind.config = {
@@ -141,7 +149,7 @@
     <script src="/main.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<body class="h-auto flex flex-col font-body-md text-body-md">
     
     <nav class="fixed top-0 left-0 w-full z-50 bg-charcoal-black/95 backdrop-blur-xl border-b border-primary-container/20 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 mx-auto">
     <a href="/index.html"><img src="/asset/Infinity%20Group%20new%20without%20TM%20logo.png" alt="Infinity Group Logo" class="h-12 md:h-16 w-auto object-contain"></a>
@@ -160,35 +168,31 @@
 </nav>
 
     <main class="flex-grow">
-        <section class="relative h-[80vh] md:h-[600px] flex items-center justify-center overflow-hidden bg-charcoal-black" data-aos="fade-up">
-            <div class="absolute inset-0 w-full h-full">
-                <div class="absolute inset-0 w-full h-full overflow-hidden bg-charcoal-black">
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-xl opacity-40 scale-110" style="background-image: url('/asset/infinity%20vandhan%20heights.png')"></div>
-    <div class="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat opacity-60" style="background-image: url('/asset/infinity%20vandhan%20heights.png')"></div>
-</div>
-                <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent"></div>
-            </div>
-            
-            <div class="absolute top-28 right-margin-mobile md:right-margin-desktop z-20">
+        <section class="w-full flex flex-col bg-surface-ivory" data-aos="fade-up">
+            <div class="relative w-full">
+                <img src="/asset/infinity%20vandhan%20heights.png" class="w-full h-auto max-h-[70vh] object-contain mx-auto block" alt="Project Hero" />
+                
+            <div class="absolute top-6 right-6 z-20">
                 <div class="bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps tracking-widest uppercase flex items-center">
                     🔵 UPCOMING
-                </div>
             </div>
-
-            <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-16">
-                <div class="font-label-caps text-label-caps text-primary-fixed mb-4 uppercase tracking-widest">Infinity Projects presents</div>
-                <h1 class="font-display-lg text-display-lg text-on-primary mb-2 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Infinity</h1>
-                <p class="font-body-lg text-body-lg text-secondary-fixed/90 max-w-2xl mx-auto mb-8">at Kharghar, Navi Mumbai, Maharashtra</p>
+                
+            </div>
+            
+            <div class="w-full px-margin-mobile md:px-margin-desktop py-12 md:py-20 text-center max-w-container-max mx-auto relative z-10">
+                <div class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-widest">Infinity Projects presents</div>
+                <h1 class="font-display-lg text-display-lg text-charcoal-black mb-2 max-w-4xl mx-auto leading-tight" data-aos="zoom-out-down">Infinity</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">at Kharghar, Navi Mumbai, Maharashtra</p>
                 
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <div class="px-6 py-2 border border-primary-container/50 bg-charcoal-black/50 backdrop-blur-sm text-primary-fixed font-label-caps text-label-caps rounded uppercase">Land Parcel: 3,000 Sq. M</div>
-                    <div class="px-6 py-2 border border-primary-container/50 bg-charcoal-black/50 backdrop-blur-sm text-primary-fixed font-label-caps text-label-caps rounded uppercase">Units: 50+</div>
-                    <div class="px-6 py-2 border border-primary-container/50 bg-charcoal-black/50 backdrop-blur-sm text-primary-fixed font-label-caps text-label-caps rounded uppercase">Type: Fully Residential</div>
+                    <div class="px-6 py-2 border border-border-muted bg-surface text-charcoal-black font-label-caps text-label-caps rounded uppercase">Land Parcel: 3,000 Sq. M</div>
+                    <div class="px-6 py-2 border border-border-muted bg-surface text-charcoal-black font-label-caps text-label-caps rounded uppercase">Units: 50+</div>
+                    <div class="px-6 py-2 border border-border-muted bg-surface text-charcoal-black font-label-caps text-label-caps rounded uppercase">Type: Fully Residential</div>
                 </div>
 
                 <a href="/contact.html" class="inline-block btn-primary px-8 py-4 font-label-caps text-label-caps tracking-widest uppercase rounded">Book a Site Visit →</a>
 
-                <div class="mt-8 text-secondary-fixed/70 font-label-caps text-[11px] tracking-wider">
+                <div class="mt-8 text-on-surface-variant/70 font-label-caps text-[11px] tracking-wider">
                     RERA Registration: [TO BE FILLED — add RERA number here]
                 </div>
             </div>
@@ -308,7 +312,16 @@
                     <div><label class="block font-body-md text-body-md text-charcoal-black mb-2">Message</label><textarea name="message" class="w-full border border-border-muted bg-transparent p-3 focus:outline-none focus:border-primary-container text-charcoal-black font-body-md h-24" placeholder="How can we help you?"></textarea></div>
                     <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="project" value="Infinity">
-                    <button class="w-full bg-primary-container text-charcoal-black py-4 font-label-caps text-label-caps tracking-widest uppercase hover:bg-bronze-deep transition-colors font-bold" type="submit">Send Enquiry</button>
+                    
+<div class="mb-6 flex items-start text-left">
+    <div class="flex items-center h-5 mt-0.5">
+        <input id="consent" name="consent" type="checkbox" required class="w-4 h-4 border-border-muted rounded bg-surface-container-lowest focus:ring-2 focus:ring-primary-container cursor-pointer accent-primary-container">
+    </div>
+    <label for="consent" class="ml-3 font-body-sm text-body-sm text-on-surface-variant text-[12px] cursor-pointer leading-tight">
+        I consent to receive RCS, WhatsApp, E-mail & SMS communications from <span class="font-bold text-charcoal-black">Infinity Group</span>. I also agree to the <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Terms & Conditions</a> and <a href="#" class="text-charcoal-black font-bold hover:underline hover:text-primary-fixed">Privacy Policy</a>.
+    </label>
+</div>
+<button class="w-full bg-primary-container text-charcoal-black py-4 font-label-caps text-label-caps tracking-widest uppercase hover:bg-bronze-deep transition-colors font-bold" type="submit">Send Enquiry</button>
                 </form>
             </div>
         </section>
