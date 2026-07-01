@@ -174,11 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 localStorage.setItem('enquiryFilled', 'true');
                 clearInterval(popupInterval);
-                
-                btn.textContent = "Thank You!";
-                btn.classList.add('bg-green-600', 'text-white', 'border-green-600');
-                
-                setTimeout(hideModal, 1500);
+                window.location.href = '/thank-you.html';
             })
             .catch(error => {
                 console.error("Error:", error);
