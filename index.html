@@ -261,7 +261,7 @@
         <!-- Slide 1: Infinity Icon -->
         <div class="carousel-slide relative w-full h-auto transition-opacity duration-1000 opacity-100 z-10">
             <div class="relative w-full h-auto overflow-hidden bg-surface-ivory">
-                <img src="/asset/infinity%20icon%20.png" class="w-full h-[60vh] md:h-[85vh] object-fill block" alt="Infinity Icon" />
+                <img src="/asset/infinity%20icon%20.png" class="w-full h-[60vh] md:h-[85vh] object-fill md:object-contain block" alt="Infinity Icon" />
                 
                 
                 <!-- Text Content -->
@@ -279,7 +279,7 @@
         <!-- Slide 2: Viviana -->
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
             <div class="relative w-full h-full overflow-hidden bg-surface-ivory">
-                <img src="/asset/viviana.png" class="w-full h-[60vh] md:h-[85vh] object-fill block" alt="Viviana" />
+                <img src="/asset/viviana.png" class="w-full h-[60vh] md:h-[85vh] object-fill md:object-contain block" alt="Viviana" />
                 
                 
                 <!-- Text Content -->
@@ -297,7 +297,7 @@
         <!-- Slide 3: Infinity Ikon -->
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none z-0">
             <div class="relative w-full h-full overflow-hidden bg-surface-ivory">
-                <img src="/asset/infinity%20icon.png" class="w-full h-[60vh] md:h-[85vh] object-fill block" alt="Infinity Ikon" />
+                <img src="/asset/infinity%20icon.png" class="w-full h-[60vh] md:h-[85vh] object-fill md:object-contain block" alt="Infinity Ikon" />
                 
                 
                 <!-- Text Content -->
@@ -341,24 +341,14 @@
                     slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0', 'absolute', 'inset-0', 'h-full');
                     slide.classList.add('opacity-100', 'z-10', 'relative', 'h-auto');
                     
-                    // Update inner image class for active state
-                    let img = slide.querySelector('img');
-                    if(img) {
-                        img.classList.remove('h-full', 'object-cover');
-                        img.classList.add('h-auto');
-                    }
+
                     indicators[index].classList.remove('opacity-50');
                     indicators[index].classList.add('opacity-100');
                 } else {
                     slide.classList.remove('opacity-100', 'z-10', 'relative', 'h-auto');
                     slide.classList.add('opacity-0', 'pointer-events-none', 'z-0', 'absolute', 'inset-0', 'h-full');
                     
-                    // Update inner image class for inactive state
-                    let img = slide.querySelector('img');
-                    if(img) {
-                        img.classList.remove('h-auto');
-                        img.classList.add('h-full', 'object-cover');
-                    }
+
                     indicators[index].classList.remove('opacity-100');
                     indicators[index].classList.add('opacity-50');
                 }
